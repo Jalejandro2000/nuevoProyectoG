@@ -101,13 +101,15 @@ public class MainActivity extends AppCompatActivity {
                 //Mostrar los datos en el TextView
                 for (revista data: kushkiList)
                 {
-                    SpannableString myTextCode = new SpannableString("id: " + data.getIssue_id() + "\n");
-                    SpannableString myTextName = new SpannableString("valumen: " + data.getVolume() + "\n\n");
+                    String labelId = "Id: ";
+                    String labelVolumen = "Volumen: ";
+                    SpannableString myTextCode = new SpannableString(labelId + data.getIssue_id() + "\n");
+                    SpannableString myTextName = new SpannableString(labelVolumen + data.getVolume() + "\n\n");
                     StyleSpan bold = new StyleSpan(Typeface.BOLD);
                     StyleSpan bold2 = new StyleSpan(Typeface.BOLD);
 
-                    myTextCode.setSpan(bold, 0 , 7, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                    myTextName.setSpan(bold2, 0 , 7, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                    myTextCode.setSpan(bold, 0 , labelId.length()-1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                    myTextName.setSpan(bold2, 0 , labelVolumen.length()-1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
 
                     datos.append(myTextCode);
                     datos.append(myTextName);
