@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <string-array name="lista">
+
+          <item>seleccionar...</item>
+          <item>Retrofit</item>
+          <item>volley...</item>
+
+      </string-array>
+
+</resources>
